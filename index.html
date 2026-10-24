@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>日語諺語繪本 🌸 150 選 - Design by Wendy</title>
+  <style>
+    :root {
+      --bg-color: #faf7f2;
+      --grid-line: #e8e2d8;
+      --border-dark: #2d3748;
+      --primary-red: #e06a55;
+      --btn-green: #65a58e;
+      --btn-cream: #fbf8f3;
+      --badge-pink: #fde8ed;
+      --badge-pink-border: #ea90a2;
+      --badge-pink-text: #8c4353;
+      --card-sec-bg: #f6faf5;
+      --card-sec-border: #5b9e7a;
+      --text-main: #2d3748;
+      --text-muted: #718096;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif;
+      background-color: var(--bg-color);
+      background-image: 
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 20px 20px;
+      color: var(--text-main);
+      padding: 16px 12px 40px;
+      min-height: 100vh;
+    }
+
+    .app-container {
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    .header-area {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .main-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #cf5656;
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+    }
+
+    .wendy-badge {
+      display: inline-block;
+      padding: 4px 18px;
+      border: 1.5px dashed var(--badge-pink-border);
+      background-color: var(--badge-pink);
+      color: var(--badge-pink-text);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+
+    .nav-btn {
+      padding: 8px 10px;
+      border: 2px solid var(--border-dark);
+      border-radius: 12px;
+      background: var(--btn-cream);
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 0 var(--border-dark);
+      transition: all 0.1s ease;
+      white-space: nowrap;
+    }
+
+    .nav-btn:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+
+    .nav-btn-quiz {
+      background: var(--primary-red);
+      color: #fff;
+    }
+
+    .nav-btn-jp {
+      background: #4a7c59;
+      color: #fff;
+    }
+
+    .group-select {
+      flex: 1;
+      padding: 8px 6px;
+      border: 2px solid var(--border-dark);
+      border-radius: 12px;
+      background: #fff;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-main);
+      box-shadow: 0 2px 0 var(--border-dark);
+      outline: none;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .search-input-wrap {
+      flex: 1;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 8px 12px 8px 34px;
+      border: 2px solid var(--border-dark);
+      border-radius: 12px;
+      background: #fff;
+      font-size: 0.9rem;
+      outline: none;
+      box-shadow: 0 2px 0 var(--border-dark);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.9rem;
+      pointer-events: none;
+      color: #718096;
+    }
+
+    .clear-btn {
+      padding: 8px 14px;
+      border: 2px solid var(--border-dark);
+      border-radius: 12px;
+      background: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 0 var(--border-dark);
+    }
+
+    .notebook-card {
+      background: #fff;
+      border: 2.5px solid var(--border-dark);
+      border-radius: 22px;
+      padding: 26px 18px 20px;
+      position: relative;
+      box-shadow: 0 4px 0 var(--border-dark);
+      margin-bottom: 18px;
+    }
+
+    .washi-tape {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #f4a261;
+      color: #4a2800;
+      padding: 3px 18px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      border-radius: 2px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      opacity: 0.95;
+    }
+
+    .proverb-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding: 6px 0;
+    }
+
+    .proverb-kanji {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--border-dark);
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    rt {
+      font-size: 0.55em;
+      color: #c05621;
+      font-weight: 700;
+    }
+
+    .audio-circle-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #e76f51;
+      border: 2px solid var(--border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 0 var(--border-dark);
+      font-size: 1.1rem;
+      color: #fff;
+      flex-shrink: 0;
+      transition: transform 0.1s;
+    }
+
+    .audio-circle-btn:active {
+      transform: scale(0.92);
+    }
+
+    .content-section {
+      background: var(--card-sec-bg);
+      border-left: 4.5px solid var(--card-sec-border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+    }
+
+    .sec-tag {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--card-sec-border);
+      margin-bottom: 6px;
+    }
+
+    .sec-body {
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: #2d3748;
+      font-weight: 500;
+    }
+
+    .sec-example-ja {
+      font-size: 1.02rem;
+      font-weight: 600;
+      line-height: 1.8;
+      margin-bottom: 4px;
+      color: #1a202c;
+    }
+
+    .sec-example-zh {
+      font-size: 0.92rem;
+      color: #4a5568;
+      line-height: 1.5;
+    }
+
+    .card-footer-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 6px;
+    }
+
+    .page-indicator {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #4a5568;
+    }
+
+    .cover-view {
+      text-align: center;
+      padding: 24px 10px 10px;
+    }
+
+    .cover-welcome {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #cf5656;
+      margin-bottom: 12px;
+    }
+
+    .cover-sub {
+      font-size: 0.96rem;
+      color: #4a5568;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .cover-action-btn {
+      width: 100%;
+      padding: 13px 16px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      border: 2px solid var(--border-dark);
+      border-radius: 14px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 3px 0 var(--border-dark);
+      transition: all 0.1s;
+    }
+
+    .cover-action-btn:active {
+      transform: translateY(3px);
+      box-shadow: none;
+    }
+
+    .btn-study-large {
+      background: var(--btn-green);
+      color: #fff;
+    }
+
+    .btn-quiz-large {
+      background: var(--primary-red);
+      color: #fff;
+    }
+
+    .btn-jp-large {
+      background: #4a7c59;
+      color: #fff;
+    }
+
+    .btn-errors-large {
+      background: #d97706;
+      color: #fff;
+    }
+
+    .quiz-view {
+      padding: 8px 4px;
+    }
+
+    .quiz-progress-text {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #718096;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .quiz-question-box {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .quiz-question-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #4a5568;
+      margin-bottom: 8px;
+    }
+
+    .quiz-question-text {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--border-dark);
+      line-height: 1.7;
+    }
+
+    .quiz-option-btn {
+      width: 100%;
+      text-align: left;
+      padding: 13px 15px;
+      margin-bottom: 10px;
+      border: 2px solid var(--border-dark);
+      border-radius: 12px;
+      background: #fff;
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: #2d3748;
+      cursor: pointer;
+      box-shadow: 0 2px 0 var(--border-dark);
+      transition: all 0.1s;
+      line-height: 1.4;
+    }
+
+    .quiz-option-btn.correct {
+      background: #c6f6d5;
+      border-color: #276749;
+      color: #22543d;
+      font-weight: 800;
+    }
+
+    .quiz-option-btn.wrong {
+      background: #fed7d7;
+      border-color: #9b2c2c;
+      color: #742a2a;
+    }
+
+    .quiz-next-btn {
+      width: 100%;
+      padding: 13px;
+      border: 2px solid var(--border-dark);
+      border-radius: 12px;
+      background: var(--primary-red);
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 2px 0 var(--border-dark);
+      margin-top: 10px;
+    }
+
+    .quiz-result-score {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--primary-red);
+      margin: 16px 0;
+    }
+
+    .empty-hint {
+      text-align: center;
+      padding: 40px 10px;
+      color: #4a7c59;
+      font-weight: 700;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+
+<div class="app-container">
+  <div class="header-area">
+    <h1 class="main-title">日語諺語繪本 🌸 150 選</h1>
+    <div class="wendy-badge">🌸 Design by Wendy ✎ · v2.0</div>
+  </div>
+
+  <div class="nav-bar">
+    <button class="nav-btn" onclick="showCoverView()">🏠 封面</button>
+    <select class="group-select" id="groupSelect" onchange="onGroupChange(this.value)"></select>
+    <button class="nav-btn nav-btn-quiz" onclick="startQuizMode()">🎯 測驗</button>
+    <button class="nav-btn nav-btn-jp" onclick="startJpQuizMode()">🇯🇵 日文</button>
+  </div>
+
+  <div class="search-row">
+    <div class="search-input-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-input" id="keywordInput" placeholder="關鍵字 (狗、砂、あいた)" oninput="onSearchInput()">
+    </div>
+    <button class="clear-btn" onclick="clearSearch()">清除</button>
+  </div>
+
+  <div class="notebook-card">
+    <div class="washi-tape">🐾 NOTE</div>
+    
+    <div id="viewCover" class="cover-view">
+      <div class="cover-welcome">歡迎來到諺語繪本 ✨</div>
+      <div class="cover-sub">收錄 150 條生活與考試必備日語慣用語</div>
+      <button class="cover-action-btn btn-study-large" onclick="startStudyMode()">📖 開始學習</button>
+      <button class="cover-action-btn btn-quiz-large" onclick="startQuizMode()">🎯 雙語基礎測驗</button>
+      <button class="cover-action-btn btn-jp-large" onclick="startJpQuizMode()">🇯🇵 全日文實戰專區</button>
+      <button class="cover-action-btn btn-errors-large" id="coverBtnErrors" onclick="switchToErrors()">📕 錯題特訓專區</button>
+    </div>
+
+    <div id="viewStudy" style="display: none;">
+      <div id="studyCardContent"></div>
+      <div class="card-footer-nav" id="studyNavRow">
+        <button class="nav-btn" id="btnPrev" onclick="prevCard()">⬅️ 上一個</button>
+        <span class="page-indicator" id="pageIndicator">1 / 10</span>
+        <button class="nav-btn" id="btnNext" onclick="nextCard()">下一個 ➡️</button>
+      </div>
+    </div>
+
+    <div id="viewQuiz" class="quiz-view" style="display: none;"></div>
+    <div id="viewJpQuiz" class="quiz-view" style="display: none;"></div>
+  </div>
+</div>
+
+<!-- 載入資料庫檔案 -->
+<script src="data.js"></script>
+<script src="data .js"></script>
+
+<script>
+  /* 錯題本儲存鍵名 */
+  const ERROR_STORAGE_KEY = 'wendy_proverbs_errors_v2';
+
+  /* 讀取錯題記錄：格式為 { id: streakCount } */
+  function getErrorMap() {
+    try {
+      const raw = localStorage.getItem(ERROR_STORAGE_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveErrorMap(map) {
+    try {
+      localStorage.setItem(ERROR_STORAGE_KEY, JSON.stringify(map));
+    } catch (e) {}
+  }
+
+  /* 答錯記錄：重置連續答對次數為 0 */
+  function recordWrong(id) {
+    const map = getErrorMap();
+    map[id] = 0;
+    saveErrorMap(map);
+    updateDropdownLabels();
+  }
+
+  /* 答對記錄：若在錯題清單中，連續答對 2 次則消除 */
+  function recordCorrect(id) {
+    const map = getErrorMap();
+    if (map[id] !== undefined) {
+      map[id] = (map[id] || 0) + 1;
+      if (map[id] >= 2) {
+        delete map[id];
+      }
+      saveErrorMap(map);
+      updateDropdownLabels();
+    }
+  }
+
+  /* 方案 A：精確平假名發音解析 (從 ruby 與 rt 抽取) */
+  function extractKanaFromRuby(html) {
+    if (!html) return '';
+    const temp = document.createElement('div');
+    temp.innerHTML = html;
+    const rubies = temp.querySelectorAll('ruby');
+    rubies.forEach(ruby => {
+      const rts = Array.from(ruby.querySelectorAll('rt')).map(rt => rt.textContent.trim()).join('');
+      ruby.replaceWith(rts);
+    });
+    return temp.textContent.replace(/\s+/g, '').trim();
+  }
+
+  function playAudio(kanjiHtml, fallbackText) {
+    let textToSpeak = extractKanaFromRuby(kanjiHtml);
+    if (!textToSpeak) textToSpeak = fallbackText || '';
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(textToSpeak);
+    utterance.lang = 'ja-JP';
+    utterance.rate = 0.85;
+    window.speechSynthesis.speak(utterance);
+  }
+
+  /* 全域狀態 */
+  let currentScope = '1'; // 'all', 'errors', 或 '1' ~ '15'
+  let currentGroupList = [];
+  let currentIndex = 0;
+
+  let quizQuestions = [];
+  let quizIndex = 0;
+  let quizScore = 0;
+  let isAnswered = false;
+
+  let jpQuizQuestions = [];
+  let jpQuizIndex = 0;
+  let jpQuizScore = 0;
+  let isJpAnswered = false;
+
+  function init() {
+    if (typeof proverbsData === 'undefined' || proverbsData.length === 0) {
+      alert("請確保 index.html 與 data.js 放在同一個資料夾內！");
+      return;
+    }
+    // 自動修正資料欄位相容性
+    proverbsData.forEach(item => {
+      if (!item.group && item.day) item.group = item.day;
+    });
+
+    initGroupDropdown();
+    loadScope('1');
+    showCoverView();
+  }
+
+  function initGroupDropdown() {
+    const sel = document.getElementById('groupSelect');
+    sel.innerHTML = '';
+
+    const optAll = document.createElement('option');
+    optAll.value = 'all';
+    optAll.innerText = '🎲 全 150 題綜合';
+    sel.appendChild(optAll);
+
+    const optErr = document.createElement('option');
+    optErr.value = 'errors';
+    optErr.id = 'optErrors';
+    optErr.innerText = '📕 錯題專區';
+    sel.appendChild(optErr);
+
+    for (let i = 1; i <= 15; i++) {
+      const startNum = String((i - 1) * 10 + 1).padStart(3, '0');
+      const endNum = String(i * 10).padStart(3, '0');
+      const opt = document.createElement('option');
+      opt.value = String(i);
+      opt.innerText = `Day ${i} (${startNum} - ${endNum})`;
+      sel.appendChild(opt);
+    }
+    updateDropdownLabels();
+  }
+
+  function updateDropdownLabels() {
+    const errMap = getErrorMap();
+    const count = Object.keys(errMap).length;
+    const optErr = document.getElementById('optErrors');
+    if (optErr) {
+      optErr.innerText = `📕 錯題專區 (${count})`;
+    }
+    const coverBtnErr = document.getElementById('coverBtnErrors');
+    if (coverBtnErr) {
+      coverBtnErr.innerText = `📕 錯題特訓專區 (${count} 題)`;
+    }
+  }
+
+  function loadScope(scope) {
+    currentScope = scope;
+    document.getElementById('groupSelect').value = scope;
+    currentIndex = 0;
+
+    if (scope === 'all') {
+      currentGroupList = [...proverbsData];
+    } else if (scope === 'errors') {
+      const errMap = getErrorMap();
+      currentGroupList = proverbsData.filter(item => errMap[item.id] !== undefined);
+    } else {
+      const gNum = parseInt(scope);
+      currentGroupList = proverbsData.filter(item => item.group === gNum);
+    }
+  }
+
+  function onGroupChange(val) {
+    loadScope(val);
+    startStudyMode();
+  }
+
+  function switchToErrors() {
+    loadScope('errors');
+    startStudyMode();
+  }
+
+  function showCoverView() {
+    updateDropdownLabels();
+    document.getElementById('viewCover').style.display = 'block';
+    document.getElementById('viewStudy').style.display = 'none';
+    document.getElementById('viewQuiz').style.display = 'none';
+    document.getElementById('viewJpQuiz').style.display = 'none';
+  }
+
+  function startStudyMode() {
+    document.getElementById('viewCover').style.display = 'none';
+    document.getElementById('viewStudy').style.display = 'block';
+    document.getElementById('viewQuiz').style.display = 'none';
+    document.getElementById('viewJpQuiz').style.display = 'none';
+    renderCurrentCard();
+  }
+
+  function renderCurrentCard() {
+    const container = document.getElementById('studyCardContent');
+    const navRow = document.getElementById('studyNavRow');
+
+    if (currentGroupList.length === 0) {
+      if (currentScope === 'errors') {
+        container.innerHTML = `
+          <div class="empty-hint">
+            🎉 太棒了！目前沒有待複習的錯題！<br>
+            <span style="font-size:0.9rem; color:#718096; font-weight:normal;">在測驗中答錯的題目會自動收集到這裡喔～</span>
+          </div>`;
+      } else {
+        container.innerHTML = '<div class="empty-hint">找不到相關題目 🐾</div>';
+      }
+      navRow.style.display = 'none';
+      return;
+    }
+
+    navRow.style.display = 'flex';
+    const item = currentGroupList[currentIndex];
+    if (!item) return;
+
+    container.innerHTML = `
+      <div class="proverb-header">
+        <div class="proverb-kanji">${item.kanji}</div>
+        <button class="audio-circle-btn" onclick="playAudio('${item.kanji.replace(/'/g, "\\'")}', '${item.kanjiPlain}')" title="聆聽發音">🔊</button>
+      </div>
+
+      <div class="content-section">
+        <div class="sec-tag">🍓 意思</div>
+        <div class="sec-body">${item.meaning}</div>
+      </div>
+
+      <div class="content-section">
+        <div class="sec-tag">💡 典故與脈絡</div>
+        <div class="sec-body">${item.story}</div>
+      </div>
+
+      <div class="content-section">
+        <div class="sec-tag">📖 例句</div>
+        <div class="sec-body">
+          <div class="sec-example-ja">${item.example}</div>
+          <div class="sec-example-zh">${item.exampleTrans}</div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('pageIndicator').innerText = `${currentIndex + 1} / ${currentGroupList.length}`;
+    document.getElementById('btnPrev').style.visibility = (currentIndex === 0) ? 'hidden' : 'visible';
+    document.getElementById('btnNext').style.visibility = (currentIndex === currentGroupList.length - 1) ? 'hidden' : 'visible';
+  }
+
+  function prevCard() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      renderCurrentCard();
+    }
+  }
+
+  function nextCard() {
+    if (currentIndex < currentGroupList.length - 1) {
+      currentIndex++;
+      renderCurrentCard();
+    }
+  }
+
+  function onSearchInput() {
+    const keyword = document.getElementById('keywordInput').value.trim().toLowerCase();
+    if (!keyword) {
+      loadScope(currentScope);
+      startStudyMode();
+      return;
+    }
+
+    const filtered = proverbsData.filter(item => 
+      (item.kanjiPlain && item.kanjiPlain.toLowerCase().includes(keyword)) ||
+      (item.kanji && item.kanji.toLowerCase().includes(keyword)) ||
+      (item.meaning && item.meaning.toLowerCase().includes(keyword)) ||
+      (item.story && item.story.toLowerCase().includes(keyword))
+    );
+
+    document.getElementById('viewCover').style.display = 'none';
+    document.getElementById('viewStudy').style.display = 'block';
+    document.getElementById('viewQuiz').style.display = 'none';
+    document.getElementById('viewJpQuiz').style.display = 'none';
+
+    const container = document.getElementById('studyCardContent');
+    if (filtered.length === 0) {
+      container.innerHTML = '<div style="text-align:center; padding:30px; color:#a0aec0;">找不到相符的諺語 🐾</div>';
+      document.getElementById('studyNavRow').style.display = 'none';
+      return;
+    }
+
+    currentGroupList = filtered;
+    currentIndex = 0;
+    renderCurrentCard();
+  }
+
+  function clearSearch() {
+    document.getElementById('keywordInput').value = '';
+    loadScope(currentScope);
+    startStudyMode();
+  }
+
+  /* 隨機抽取候選池並打亂 */
+  function getQuizPool() {
+    let pool = [];
+    if (currentScope === 'all') {
+      pool = [...proverbsData];
+    } else if (currentScope === 'errors') {
+      const errMap = getErrorMap();
+      pool = proverbsData.filter(item => errMap[item.id] !== undefined);
+    } else {
+      const gNum = parseInt(currentScope);
+      pool = proverbsData.filter(item => item.group === gNum);
+    }
+
+    // 隨機洗牌
+    pool.sort(() => Math.random() - 0.5);
+
+    // 每次測驗最多抽 10 題
+    return pool.slice(0, 10);
+  }
+
+  /* 雙語基礎測驗模式 */
+  function startQuizMode() {
+    const pool = getQuizPool();
+    if (pool.length === 0) {
+      if (currentScope === 'errors') {
+        alert("太棒了！目前沒有錯題可以測驗喔！🌸");
+      } else {
+        alert("目前範圍沒有可測驗的題目。");
+      }
+      return;
+    }
+
+    document.getElementById('viewCover').style.display = 'none';
+    document.getElementById('viewStudy').style.display = 'none';
+    document.getElementById('viewQuiz').style.display = 'block';
+    document.getElementById('viewJpQuiz').style.display = 'none';
+
+    quizQuestions = pool.map(correct => {
+      const others = proverbsData.filter(item => item.id !== correct.id);
+      const wrong = [];
+      while (wrong.length < 3) {
+        const r = others[Math.floor(Math.random() * others.length)];
+        if (!wrong.some(w => w.id === r.id)) wrong.push(r);
+      }
+      const options = [correct, ...wrong].sort(() => Math.random() - 0.5);
+      const type = Math.floor(Math.random() * 3) + 1;
+      return { correct, options, type };
+    });
+
+    quizIndex = 0;
+    quizScore = 0;
+    renderQuizQuestion();
+  }
+
+  function renderQuizQuestion() {
+    isAnswered = false;
+    const view = document.getElementById('viewQuiz');
+    if (quizIndex >= quizQuestions.length) {
+      renderQuizResult();
+      return;
+    }
+
+    const q = quizQuestions[quizIndex];
+    let qTitle = '';
+    let qText = '';
+    let optHtml = '';
+
+    if (q.type === 1) {
+      qTitle = '請問此諺語的意思是：';
+      qText = q.correct.kanji;
+      optHtml = q.options.map((opt, i) => `
+        <button class="quiz-option-btn" id="qopt-${i}" onclick="chooseAnswer(${i}, ${opt.id === q.correct.id})">
+          ${opt.meaning}
+        </button>
+      `).join('');
+    } else if (q.type === 2) {
+      qTitle = '請選出符合此釋義的諺語：';
+      qText = q.correct.meaning;
+      optHtml = q.options.map((opt, i) => `
+        <button class="quiz-option-btn" id="qopt-${i}" onclick="chooseAnswer(${i}, ${opt.id === q.correct.id})">
+          ${opt.kanjiPlain}
+        </button>
+      `).join('');
+    } else {
+      qTitle = '根據情境填空，應填入哪句諺語？';
+      qText = `「${q.correct.exampleTrans}」`;
+      optHtml = q.options.map((opt, i) => `
+        <button class="quiz-option-btn" id="qopt-${i}" onclick="chooseAnswer(${i}, ${opt.id === q.correct.id})">
+          ${opt.kanjiPlain}
+        </button>
+      `).join('');
+    }
+
+    const scopeLabel = currentScope === 'all' ? '綜合測驗' : (currentScope === 'errors' ? '錯題特訓' : `Day ${currentScope}`);
+
+    view.innerHTML = `
+      <div class="quiz-progress-text">${scopeLabel}・第 ${quizIndex + 1} / ${quizQuestions.length} 題</div>
+      <div class="quiz-question-box">
+        <div class="quiz-question-title">${qTitle}</div>
+        <div class="quiz-question-text">${qText}</div>
+      </div>
+      <div>${optHtml}</div>
+      <div id="quizNextArea" style="display:none;">
+        <button class="quiz-next-btn" onclick="nextQuiz()">下一題 ➔</button>
+      </div>
+    `;
+  }
+
+  function chooseAnswer(idx, isCorrect) {
+    if (isAnswered) return;
+    isAnswered = true;
+    const q = quizQuestions[quizIndex];
+    q.options.forEach((opt, i) => {
+      const btn = document.getElementById(`qopt-${i}`);
+      if (opt.id === q.correct.id) btn.classList.add('correct');
+      if (i === idx && !isCorrect) btn.classList.add('wrong');
+    });
+
+    if (isCorrect) {
+      quizScore += Math.round(100 / quizQuestions.length);
+      recordCorrect(q.correct.id);
+    } else {
+      recordWrong(q.correct.id);
+    }
+
+    document.getElementById('quizNextArea').style.display = 'block';
+  }
+
+  function nextQuiz() {
+    quizIndex++;
+    renderQuizQuestion();
+  }
+
+  function renderQuizResult() {
+    const view = document.getElementById('viewQuiz');
+    const finalScore = Math.min(100, quizScore);
+    view.innerHTML = `
+      <div style="text-align:center; padding: 20px 0;">
+        <div style="font-size:1.3rem; font-weight:800; color:#cf5656;">🎉 基礎測驗完成！</div>
+        <div class="quiz-result-score">${finalScore} 分</div>
+        <div style="color:#718096; font-size:0.95rem; margin-bottom:24px;">
+          ${finalScore === 100 ? '太神了！全部題目精準掌握！ 🌸' : '答錯的題目已自動記錄在錯題專區囉！ 🐾'}
+        </div>
+        <button class="cover-action-btn btn-study-large" onclick="startStudyMode()">📖 回到學習卡片</button>
+        <button class="cover-action-btn btn-quiz-large" onclick="startQuizMode()">🔄 再隨機測一次</button>
+      </div>
+    `;
+  }
+
+  /* 🇯🇵 全日文實戰專區 (例句挖空選諺語) */
+  function getJpMaskedSentence(item) {
+    let cleanEx = item.example.replace(/<rt>.*?<\/rt>/g, '').replace(/<\/?ruby>/g, '').trim();
+    let plainK = item.kanjiPlain.replace(/\s+/g, '');
+    
+    let quoteMatch = cleanEx.match(/「(.*?)」/);
+    if (quoteMatch && quoteMatch[1].length >= 3) {
+      return cleanEx.replace(`「${quoteMatch[1]}」`, '（ ＿＿＿＿ ）');
+    }
+    
+    for (let len = plainK.length; len >= 2; len--) {
+      let stem = plainK.substring(0, len);
+      let idx = cleanEx.indexOf(stem);
+      if (idx !== -1) {
+        let rest = cleanEx.substring(idx + stem.length);
+        let trailMatch = rest.match(/^[ぁ-ん]+/);
+        let trail = trailMatch ? trailMatch[0] : '';
+        return cleanEx.substring(0, idx) + '（ ＿＿＿＿ ）' + cleanEx.substring(idx + stem.length + trail.length);
+      }
+    }
+    return cleanEx.replace(plainK, '（ ＿＿＿＿ ）');
+  }
+
+  function startJpQuizMode() {
+    const pool = getQuizPool();
+    if (pool.length === 0) {
+      if (currentScope === 'errors') {
+        alert("太棒了！目前沒有錯題可以測驗喔！🌸");
+      } else {
+        alert("目前範圍沒有可測驗的題目。");
+      }
+      return;
+    }
+
+    document.getElementById('viewCover').style.display = 'none';
+    document.getElementById('viewStudy').style.display = 'none';
+    document.getElementById('viewQuiz').style.display = 'none';
+    document.getElementById('viewJpQuiz').style.display = 'block';
+
+    jpQuizQuestions = pool.map(correct => {
+      const others = proverbsData.filter(item => item.id !== correct.id);
+      const wrong = [];
+      while (wrong.length < 3) {
+        const r = others[Math.floor(Math.random() * others.length)];
+        if (!wrong.some(w => w.id === r.id)) wrong.push(r);
+      }
+      const options = [correct, ...wrong].sort(() => Math.random() - 0.5);
+      return { correct, options, jpSentence: getJpMaskedSentence(correct) };
+    });
+
+    jpQuizIndex = 0;
+    jpQuizScore = 0;
+    renderJpQuizQuestion();
+  }
+
+  function renderJpQuizQuestion() {
+    isJpAnswered = false;
+    const view = document.getElementById('viewJpQuiz');
+    if (jpQuizIndex >= jpQuizQuestions.length) {
+      renderJpQuizResult();
+      return;
+    }
+
+    const q = jpQuizQuestions[jpQuizIndex];
+    const scopeLabel = currentScope === 'all' ? '総合実戦' : (currentScope === 'errors' ? '弱点特訓' : `Day ${currentScope}`);
+
+    view.innerHTML = `
+      <div class="quiz-progress-text">${scopeLabel}・第 ${jpQuizIndex + 1} / ${jpQuizQuestions.length} 問</div>
+      <div class="quiz-question-box">
+        <div class="quiz-question-title">【問題】文中の（  ）に入る最も適当なことわざを選びなさい。</div>
+        <div class="quiz-question-text">「${q.jpSentence}」</div>
+      </div>
+      <div>
+        ${q.options.map((opt, i) => `
+          <button class="quiz-option-btn" id="jpopt-${i}" onclick="chooseJpAnswer(${i},${opt.id === q.correct.id})">
+            ${opt.kanjiPlain}
+          </button>
+        `).join('')}
+      </div>
+      <div id="jpQuizNextArea" style="display:none;">
+        <button class="quiz-next-btn" style="background:#4a7c59;" onclick="nextJpQuiz()">次の問題へ ➔</button>
+      </div>
+    `;
+  }
+
+  function chooseJpAnswer(idx, isCorrect) {
+    if (isJpAnswered) return;
+    isJpAnswered = true;
+    const q = jpQuizQuestions[jpQuizIndex];
+    q.options.forEach((opt, i) => {
+      const btn = document.getElementById(`jpopt-${i}`);
+      if (opt.id === q.correct.id) btn.classList.add('correct');
+      if (i === idx && !isCorrect) btn.classList.add('wrong');
+    });
+
+    if (isCorrect) {
+      jpQuizScore += Math.round(100 / jpQuizQuestions.length);
+      recordCorrect(q.correct.id);
+    } else {
+      recordWrong(q.correct.id);
+    }
+
+    document.getElementById('jpQuizNextArea').style.display = 'block';
+  }
+
+  function nextJpQuiz() {
+    jpQuizIndex++;
+    renderJpQuizQuestion();
+  }
+
+  function renderJpQuizResult() {
+    const view = document.getElementById('viewJpQuiz');
+    const finalScore = Math.min(100, jpQuizScore);
+    view.innerHTML = `
+      <div style="text-align:center; padding: 20px 0;">
+        <div style="font-size:1.3rem; font-weight:800; color:#cf5656;">🎉 実戦テスト終了！</div>
+        <div class="quiz-result-score" style="color:#4a7c59;">${finalScore} 点</div>
+        <div style="color:#718096; font-size:0.95rem; margin-bottom:24px;">
+          ${finalScore === 100 ? 'すばらしい！完璧にマスターしました！ 🌸' : '間違えた問題は「弱点特訓」で自動復習できます！ 🐾'}
+        </div>
+        <button class="cover-action-btn btn-study-large" onclick="startStudyMode()">📖 復習カードに戻る</button>
+        <button class="cover-action-btn btn-jp-large" onclick="startJpQuizMode()">🔄 もう一度挑戦する</button>
+      </div>
+    `;
+  }
+
+  window.onload = init;
+</script>
+</body>
+</html>
